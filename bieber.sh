@@ -13,12 +13,12 @@ unzip -f terminal-parrot-darwin-amd64.zip
 case $SHELL in
   */zsh)
     echo 'export PATH=$PATH:'$(abs_path ~/.tmp) >> ~/.zshrc
-    echo 'alias ls='"'"'([[ $RANDOM -lt 2048 ]] && terminal-parrot -loops 3); ls'"'"'' >> ~/.zshrc
+    echo "alias ls='([[ \$RANDOM -lt 2048 ]] && terminal-parrot -loops 3); ls'" >> ~/.zshrc
     clear
     ;;
   */bash)
     echo 'export PATH=$PATH:'$(abs_path ~/.tmp) >> ~/.bashrc
-    echo 'alias ls='"'"'([[ $RANDOM -lt 2048 ]] && terminal-parrot -loops 3); ls'"'"'' >> ~/.bashrc
+    echo "alias ls='([[ \$RANDOM -lt 2048 ]] && terminal-parrot -loops 3); ls'" >> ~/.bashrc
     clear
     ;;
   *)
