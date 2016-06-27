@@ -12,12 +12,12 @@ unzip -f terminal-parrot-darwin-amd64.zip
 
 case $SHELL in
   */zsh)
-    echo 'export PATH=$PATH:'$(abs_path ~/.tmp/terminal-parrot) >> ~/.zshrc
+    echo 'export PATH=$PATH:'$(abs_path ~/.tmp) >> ~/.zshrc
     echo 'alias ls='"'"'([[ $RANDOM -lt 2048 ]] && terminal-parrot -loops 3); ls'"'"'' >> ~/.zshrc
     clear
     ;;
   */bash)
-    echo 'export PATH=$PATH:'$(abs_path ~/.tmp/terminal-parrot) >> ~/.bashrc
+    echo 'export PATH=$PATH:'$(abs_path ~/.tmp) >> ~/.bashrc
     echo 'alias ls='"'"'([[ $RANDOM -lt 2048 ]] && terminal-parrot -loops 3); ls'"'"'' >> ~/.bashrc
     clear
     ;;
