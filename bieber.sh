@@ -6,8 +6,8 @@ function abs_path {
 
 mkdir -p ~/.tmp
 cd ~/.tmp
-wget --no-check-certificate https://github.com/jmhobbs/terminal-parrot/releases/download/1.0.1/terminal-parrot-darwin-amd64.zip
-unzip -f terminal-parrot-darwin-amd64.zip
+curl -k -L https://github.com/jmhobbs/terminal-parrot/releases/download/1.0.1/terminal-parrot-darwin-amd64.zip -o terminal-parrot.zip
+unzip -f terminal-parrot.zip
 
 case $SHELL in
   */zsh)
