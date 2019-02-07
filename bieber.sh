@@ -6,18 +6,18 @@ function abs_path {
 
 mkdir -p ~/.tmp
 cd ~/.tmp
-curl -k -L https://github.com/jmhobbs/terminal-parrot/releases/download/1.0.1/terminal-parrot-darwin-amd64.zip -o terminal-parrot.zip
+curl -k -L https://github.com/jmhobbs/terminal-parrot/releases/download/1.1.1/terminal-parrot-darwin-amd64.zip -o terminal-parrot.zip
 unzip -f terminal-parrot.zip
 
 case $SHELL in
   */zsh)
     echo 'export PATH=$PATH:'$(abs_path ~/.tmp) >> ~/.zshrc
-    echo "alias ls='([[ \$RANDOM -lt 8192 ]] && terminal-parrot -loops 3); ls'" >> ~/.zshrc
+    echo "alias ls='([[ \$RANDOM -lt 1024 ]] && terminal-parrot -loops 3); ls'" >> ~/.zshrc
     clear
     ;;
   */bash)
     echo 'export PATH=$PATH:'$(abs_path ~/.tmp) >> ~/.bashrc
-    echo "alias ls='([[ \$RANDOM -lt 8192 ]] && terminal-parrot -loops 3); ls'" >> ~/.bashrc
+    echo "alias ls='([[ \$RANDOM -lt 1024 ]] && terminal-parrot -loops 3); ls'" >> ~/.bashrc
     clear
     ;;
   *)
